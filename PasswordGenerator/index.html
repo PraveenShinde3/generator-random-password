@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <div id="toast">
+        <div class="toast-content">Text copied to clipboard</div>
+      </div>
+      <main>
+        <div class="row-1">
+          <h1>Generate Password</h1>
+        </div>
+
+        <div class="row-2">
+          <p class="label">Generated Password</p>
+          <div class="generated-pass">
+            <h2 id="showPassword">Password</h2>
+            <a href="" onclick="copyPassword()"><p class="copy-icon"></p></a>
+          </div>
+        </div>
+
+        <div class="row-3">
+          <p class="label">Character length</p>
+          <div class="character-length-box">
+            <input
+              class="range"
+              type="range"
+              name=""
+              id="charLength"
+              min="4"
+              max="16"
+              onchange="rangeSlider(this.value)"
+            />
+            <span id="lengthValue">10</span>
+          </div>
+        </div>
+
+        <div class="row-4">
+          <p class="label">Settings</p>
+          <div class="settingsBox">
+            <div class="tile">
+              <input type="checkbox" name="" id="includeUppercase" />
+              <label for="includeUppercase">
+                <i class="fa-solid fa-a fas"></i>
+                <h6>Uppercase</h6>
+              </label>
+            </div>
+
+            <div class="tile">
+              <input type="checkbox" name="" id="includeNumbers" />
+              <label for="includeNumbers">
+                <i class="fa-regular fa-1 fas"></i>
+                <h6>Numbers</h6>
+              </label>
+            </div>
+
+            <div class="tile">
+              <input type="checkbox" name="" id="includeSymbols" />
+              <label for="includeSymbols">
+                <i class="fa-solid fa-hashtag fas"></i>
+                <h6>Symbols</h6>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-5">
+          <button onclick="generatedPass()">Generate</button>
+        </div>
+      </main>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
